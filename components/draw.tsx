@@ -14,16 +14,19 @@ interface Tile{
 export const SortTile=({value,maxValue,sort,isHighlight}:Tile)=>{
 	const background=color(value,maxValue,sort);
 
+	const width=100/maxValue;
 	return (
 		<div
 		style={{
-			width:'15px',
-			height:'50px',
 			backgroundColor:background,
-			border:isHighlight?'3px solid red':'1px solid #333',
-			marginRight:'1px',
+			border:isHighlight?'2px solid red':'2px solid transparent',
 			transition:'all 0.1s ease-out',
-		}}>
+			width:`${width}%`,
+			height:'100%'
+		}}
+		className="w-full flex-1 self-end"
+		>
+
 		</div>
 	);
 };
