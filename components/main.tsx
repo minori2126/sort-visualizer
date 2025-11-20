@@ -15,7 +15,8 @@ import {
 } from '../utils/sort';
 
 const N=50;
-const speed=40;
+const speed=30;
+
 
 export const SortVisualizer=()=>{
 	const [array,setArray]=useState<number[]>(random(N));
